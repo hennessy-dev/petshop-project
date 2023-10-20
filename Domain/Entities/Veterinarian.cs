@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Veterinarian
+public partial class Veterinarian : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Name { get; set; }
 
     public string Email { get; set; }

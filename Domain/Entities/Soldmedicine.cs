@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Soldmedicine
+public partial class Soldmedicine : BaseEntity
 {
-    public int Id { get; set; }
-
     public int MedicineId { get; set; }
 
     public int Amount { get; set; }

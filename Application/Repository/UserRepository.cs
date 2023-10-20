@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 namespace Application.Repository;
-public class UserRepository : GenericRepository<User>
+public class UserRepository : GenericRepository<User>, IUserRepository
 {
     private readonly PetshopDbContext _context;
 
@@ -20,5 +20,13 @@ public class UserRepository : GenericRepository<User>
             .Include(u => u.Rols)
             .Include(u => u.Refreshtokens)
             .FirstOrDefaultAsync(u => u.Username.ToLower() == u.Username.ToLower());
+    }
+
+    public async Task<User> GetByUsernameAsync(string username)
+    {
+        return await _context.Users
+            .Include(u => u.Username)
+            .Include(u => u.Refreshtokens)
+            .FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
     }
 }

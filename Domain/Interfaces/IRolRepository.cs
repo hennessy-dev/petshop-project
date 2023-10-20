@@ -1,8 +1,6 @@
 using Domain.Entities;
-namespace Domain.Interfaces
+namespace Domain.Interfaces;
+public interface IRolRepository : IGenericRepository<Rol>
 {
-    public interface IRolRepository : IGenericRepository<Rol> 
-    {
-        
-    }
+    
 }
