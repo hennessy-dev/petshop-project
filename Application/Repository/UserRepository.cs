@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -14,19 +13,19 @@ public class UserRepository : GenericRepository<User>, IUserRepository
         _context = context;
     }
 
-    public async Task<User> GetByRefreshTokenAsync(string refreshToken)
+    public async Task<User> GetByRefreshTokenAsync(string RefreshToken)
     {
         return await _context.Users
             .Include(u => u.Rols)
-            .Include(u => u.Refreshtokens)
-            .FirstOrDefaultAsync(u => u.Username.ToLower() == u.Username.ToLower());
+            .Include(u => u.RefreshTokens)
+            .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == RefreshToken));
     }
 
     public async Task<User> GetByUsernameAsync(string username)
     {
         return await _context.Users
             .Include(u => u.Username)
-            .Include(u => u.Refreshtokens)
+            .Include(u => u.RefreshTokens)
             .FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
     }
 }

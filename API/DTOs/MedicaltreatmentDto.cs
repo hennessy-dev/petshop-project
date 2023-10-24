@@ -1,5 +1,5 @@
 namespace API.DTOs;
-public class MedicaltreatmentDto
+public class MedicalTreatmentDto
 {
     public int Id { get; set; }
     public int AppointmentId { get; set; }

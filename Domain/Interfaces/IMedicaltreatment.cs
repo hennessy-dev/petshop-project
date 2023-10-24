@@ -1,5 +1,5 @@
 using Domain.Entities;
 namespace Domain.Interfaces;
-public interface IMedicaltreatment : IGenericRepository<Medicaltreatment>
+public interface IMedicalTreatment : IGenericRepository<MedicalTreatment>
 {
 }

@@ -1,9 +1,7 @@
 using Domain.Entities;
-namespace Domain.Interfaces
+namespace Domain.Interfaces;
+public interface IUserRepository : IGenericRepository<User>
 {
-    public interface IUserRepository : IGenericRepository<User>
-    {
-        Task<User> GetByUsernameAsync(string username);
-        Task<User> GetByRefreshTokenAsync(string refreshToken);
-    }
+    Task<User> GetByUsernameAsync(string username);
+    Task<User> GetByRefreshTokenAsync(string RefreshToken);
 }

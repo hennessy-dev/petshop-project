@@ -6,5 +6,5 @@ public class ApiValidation : ApiResponse
         
     }
 
-    public IEnumerable<string> Errors { get; private set; }
+    public IEnumerable<string> Errors { get; set; }
 }

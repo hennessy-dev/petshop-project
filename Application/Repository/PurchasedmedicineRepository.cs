@@ -4,11 +4,11 @@ using Persistence;
 
 namespace Application.Repository
 {
-    public class PurchasedmedicineRepository : GenericRepository<Purchasedmedicine>, IPurchasedmedicine
+    public class PurchasedMedicineRepository : GenericRepository<PurchasedMedicine>, IPurchasedMedicine
     {
         private readonly PetshopDbContext _context;
 
-        public PurchasedmedicineRepository(PetshopDbContext context) : base (context)
+        public PurchasedMedicineRepository(PetshopDbContext context) : base (context)
         {
             _context = context;
         }

@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-namespace API.Controllers
+namespace API.Controllers;
+[ApiController]
+[Route("Petshop/[controller]")]
+public class BaseApiController : ControllerBase
 {
-    [ApiController]
-    [Route("api/controllers/[controller]")]
-    public class BaseApiController : ControllerBase
-    {
-    }
 }

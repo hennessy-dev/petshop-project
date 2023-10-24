@@ -1,19 +1,18 @@
-namespace Domain.Interfaces
+namespace Domain.Interfaces;
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        IRolRepository Rols { get; }
-        IUserRepository Users { get; }
-        IAppointment Appointment { get; }
-        IBreed Breed { get; }
-        IMedicaltreatment Medicaltreatment{ get; }
-        IMedicine Medicine { get; }
-        IOwner Owner { get; }
-        IPet Pet { get; }
-        IPurchasedmedicine Purchasedmedicine { get; }
-        ISoldmedicine Soldmedicine { get; }
-        ISupplier Supplier { get; }
-        IVeterinarian Veterinarian { get; }
-        Task<int> SaveAsync();
-    }
+    IRolRepository Rols { get; }
+    ISpecie Species { get; }
+    IUserRepository Users { get; }
+    IAppointment Appointment { get; }
+    IBreed Breed { get; }
+    IMedicalTreatment MedicalTreatment{ get; }
+    IMedicine Medicine { get; }
+    IOwner Owner { get; }
+    IPet Pet { get; }
+    IPurchasedMedicine PurchasedMedicine { get; }
+    ISoldMedicine SoldMedicine { get; }
+    ISupplier Supplier { get; }
+    IVeterinarian Veterinarian { get; }
+    Task<int> SaveAsync();
 }

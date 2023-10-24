@@ -13,5 +13,5 @@ public partial class Supplier : BaseEntity
 
     public virtual ICollection<Medicine> Medicines { get; set; } = new List<Medicine>();
 
-    public virtual ICollection<Purchasedmedicine> Purchasedmedicines { get; set; } = new List<Purchasedmedicine>();
+    public virtual ICollection<PurchasedMedicine> PurchasedMedicines { get; set; } = new List<PurchasedMedicine>();
 }

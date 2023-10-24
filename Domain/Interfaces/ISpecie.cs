@@ -1,6 +1,6 @@
 using Domain.Entities;
 namespace Domain.Interfaces;
-public interface ISpecies : IGenericRepository<Species>
+public interface ISpecie : IGenericRepository<Specie>
 {
     
 }

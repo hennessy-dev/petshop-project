@@ -1,6 +1,6 @@
 using Domain.Entities;
 namespace Domain.Interfaces;
-public interface ISoldmedicine : IGenericRepository<Soldmedicine>
+public interface ISoldMedicine : IGenericRepository<SoldMedicine>
 {
     
 }

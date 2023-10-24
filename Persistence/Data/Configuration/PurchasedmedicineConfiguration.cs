@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistencia.Data.Configuration
 {
-    public class PurchasedmedicineConfiguration : IEntityTypeConfiguration<Purchasedmedicine>
+    public class PurchasedMedicineConfiguration : IEntityTypeConfiguration<PurchasedMedicine>
     {
-        public void Configure(EntityTypeBuilder<Purchasedmedicine> builder)
+        public void Configure(EntityTypeBuilder<PurchasedMedicine> builder)
         {
             builder.ToTable("purchasedMedicine");   
 
@@ -19,11 +19,11 @@ namespace Persistencia.Data.Configuration
 
             builder.Property(e => e.PurchaseDate).HasColumnType("datetime");
 
-            builder.HasOne(d => d.Medicine).WithMany(p => p.Purchasedmedicines)
+            builder.HasOne(d => d.Medicine).WithMany(p => p.PurchasedMedicines)
                 .HasForeignKey(d => d.MedicineId)
                 .HasConstraintName("FK_PurchasedMedicines_Medicine_MedicineId");
 
-            builder.HasOne(d => d.Supplier).WithMany(p => p.Purchasedmedicines)
+            builder.HasOne(d => d.Supplier).WithMany(p => p.PurchasedMedicines)
                 .HasForeignKey(d => d.SupplierId)
                 .HasConstraintName("FK_PurchasedMedicines_Supplier_SupplierId");
         }

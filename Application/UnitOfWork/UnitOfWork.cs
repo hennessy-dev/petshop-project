@@ -21,6 +21,14 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
+    private ISpecie _Specie;
+    public ISpecie Species
+    {
+        get { 
+            _Specie ??= new SpecieRepository(_dbContext);
+                return _Specie;
+            }
+    }
     private IUserRepository _users;
     public IUserRepository Users    
     {
@@ -49,12 +57,12 @@ public class UnitOfWork : IUnitOfWork
             }
     }
 
-    private IMedicaltreatment _Medicaltreatment;
-    public IMedicaltreatment Medicaltreatment
+    private IMedicalTreatment _MedicalTreatment;
+    public IMedicalTreatment MedicalTreatment
     {
         get { 
-            _Medicaltreatment ??= new MedicaltreatmentRepository(_dbContext);
-                return _Medicaltreatment;
+            _MedicalTreatment ??= new MedicalTreatmentRepository(_dbContext);
+                return _MedicalTreatment;
             }
     }
 
@@ -85,21 +93,21 @@ public class UnitOfWork : IUnitOfWork
             }
     }
 
-    private IPurchasedmedicine _Purchasedmedicine;
-    public IPurchasedmedicine Purchasedmedicine
+    private IPurchasedMedicine _PurchasedMedicine;
+    public IPurchasedMedicine PurchasedMedicine
     {
         get { 
-            _Purchasedmedicine ??= new PurchasedmedicineRepository(_dbContext);
-                return _Purchasedmedicine;
+            _PurchasedMedicine ??= new PurchasedMedicineRepository(_dbContext);
+                return _PurchasedMedicine;
             }
     }
 
-    private ISoldmedicine _Soldmedicine;
-    public ISoldmedicine Soldmedicine
+    private ISoldMedicine _SoldMedicine;
+    public ISoldMedicine SoldMedicine
     {
         get { 
-            _Soldmedicine ??= new SoldmedicineRepository(_dbContext);
-                return _Soldmedicine;
+            _SoldMedicine ??= new SoldMedicineRepository(_dbContext);
+                return _SoldMedicine;
             }
     }
 

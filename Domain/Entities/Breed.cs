@@ -11,5 +11,5 @@ public partial class Breed : BaseEntity
 
     public virtual ICollection<Pet> Pets { get; set; } = new List<Pet>();
 
-    public virtual Species Species { get; set; }
+    public virtual Specie Species { get; set; }
 }

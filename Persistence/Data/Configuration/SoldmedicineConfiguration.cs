@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistencia.Data.Configuration
 {
-    public class SoldmedicineConfiguration : IEntityTypeConfiguration<Soldmedicine>
+    public class SoldMedicineConfiguration : IEntityTypeConfiguration<SoldMedicine>
     {
-        public void Configure(EntityTypeBuilder<Soldmedicine> builder)
+        public void Configure(EntityTypeBuilder<SoldMedicine> builder)
         {
-            builder.ToTable("Soldmedicine");
+            builder.ToTable("SoldMedicine");
 
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
@@ -17,7 +17,7 @@ namespace Persistencia.Data.Configuration
 
             builder.Property(e => e.SoldDate).HasColumnType("datetime");
 
-            builder.HasOne(d => d.Medicine).WithMany(p => p.Soldmedicines)
+            builder.HasOne(d => d.Medicine).WithMany(p => p.SoldMedicines)
                 .HasForeignKey(d => d.MedicineId)
                 .HasConstraintName("FK_SoldMedicine_Medicine_MedicineId");
         }

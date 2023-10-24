@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistencia.Data.Configuration
 {
-    public class SpeciesConfiguration : IEntityTypeConfiguration<Species>
+    public class SpecieConfiguration : IEntityTypeConfiguration<Specie>
     {
-        public void Configure(EntityTypeBuilder<Species> builder)
+        public void Configure(EntityTypeBuilder<Specie> builder)
         {
             builder.ToTable("species");
 

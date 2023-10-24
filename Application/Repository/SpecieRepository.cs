@@ -1,14 +1,16 @@
+using Application.Repository;
 using Domain.Entities;
 using Domain.Interfaces;
 using Persistence;
+using Persistencia;
 
 namespace Application.Repository
 {
-    public class SoldMedicineRepository : GenericRepository<SoldMedicine>, ISoldMedicine
+    public class SpecieRepository : GenericRepository<Specie>, ISpecie
     {
         private readonly PetshopDbContext _context;
 
-        public SoldMedicineRepository(PetshopDbContext context) : base (context)
+        public SpecieRepository(PetshopDbContext context) : base (context)
         {
             _context = context;
         }

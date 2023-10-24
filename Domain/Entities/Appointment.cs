@@ -13,7 +13,7 @@ public partial class Appointment : BaseEntity
 
     public string Reason { get; set; }
 
-    public virtual ICollection<Medicaltreatment> Medicaltreatments { get; set; } = new List<Medicaltreatment>();
+    public virtual ICollection<MedicalTreatment> MedicalTreatments { get; set; } = new List<MedicalTreatment>();
 
     public virtual Pet Pet { get; set; }
 

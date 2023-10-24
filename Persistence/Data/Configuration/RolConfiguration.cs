@@ -13,7 +13,7 @@ namespace Persistencia.Data.Configuration
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
-            builder.Property(e => e.RolName)
+            builder.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("rolName");

@@ -16,11 +16,11 @@ public partial class Medicine : BaseEntity
 
     public string Laboratory { get; set; }
 
-    public virtual ICollection<Medicaltreatment> Medicaltreatments { get; set; } = new List<Medicaltreatment>();
+    public virtual ICollection<MedicalTreatment> MedicalTreatments { get; set; } = new List<MedicalTreatment>();
 
-    public virtual ICollection<Purchasedmedicine> Purchasedmedicines { get; set; } = new List<Purchasedmedicine>();
+    public virtual ICollection<PurchasedMedicine> PurchasedMedicines { get; set; } = new List<PurchasedMedicine>();
 
-    public virtual ICollection<Soldmedicine> Soldmedicines { get; set; } = new List<Soldmedicine>();
+    public virtual ICollection<SoldMedicine> SoldMedicines { get; set; } = new List<SoldMedicine>();
 
     public virtual Supplier Supplier { get; set; }
 }
